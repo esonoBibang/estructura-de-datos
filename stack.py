@@ -15,25 +15,33 @@ class STACK:
         self._list.append(item)
 
     def pop(self):
-        if self.is_empty():
-            raise f"the list is empty"
-        return self._list.pop() #remove and return the top item
+        if self.is_empty() == 1:
+            return f"the stack list is empty, we can not remove"
+        else:
+            return f"{self._list.pop()} :The last item, removed" #remove and return the top item
 
     def peek(self):
-        if self.is_empty():
-            raise f"Not items in to the list"
-        return self._list[-1] #view the top item without removing it
+        if self.is_empty() == 1:
+            return f"Not items in to the Stack list"
+        else:
+            return self._list[-1] #view the top item without removing it
 
     def is_empty(self):
-        return self._list == 0
+        if len(self._list) == 0:
+            return 1
+        else:
+            return 0
 
     def __len__(self):
-        return len(self._list)
+        return f"we have {len(self._list)}  items"
 
 stack = STACK()
-stack.push(12)
-stack.push(2)
-stack.push(42)
-stack.push(13)
-stack.push(19)
+stack.push(23)
+stack.push(14)
+stack.push(34)
+stack.push(67)
+
+print(stack.__len__())
+print(stack.pop())
 print(stack.peek())
+print(stack.__len__())
