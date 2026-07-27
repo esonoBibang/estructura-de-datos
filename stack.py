@@ -35,6 +35,10 @@ class STACK:
     def __len__(self):
         return f"we have {len(self._list)}  items"
 
+
+
+    
+
 stack = STACK()
 stack.push(23)
 stack.push(14)
@@ -45,3 +49,5 @@ print(stack.__len__())
 print(stack.pop())
 print(stack.peek())
 print(stack.__len__())
+
+
