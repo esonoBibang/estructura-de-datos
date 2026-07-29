@@ -24,7 +24,7 @@ def invertir_texto(word):
 
 
     return f'la palabra invertida {palabra} y el stack ---> {stack}'
- n
+ 
 print(invertir_texto("Antonio esono"))
 
 
